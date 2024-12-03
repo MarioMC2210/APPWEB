@@ -1,60 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 body {
-    background-color:#73ec83;
-        background-size: 10rem;
-        color:rgb(250, 250, 250);
-    text-align: justify;
-    font-family: sans-serif;
+    font-family: 'Arial',sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #43c4ebfa, #a2e3f9);
+    color: #333;
+    line-height: 1.6;
 }
 
 
-h1 {
-    color: #333333;
-    font-size: 200%;
+header {
     text-align: center;
-    text-transform:uppercase
+    padding: 20px;
+    background-color: #62e974;
 }
 
-h2 {
-    background-color:#888888;
-    color: red;
-    font-size: 150%;
-    text-transform: capitalize;
-}
-h3 {
-    background-color: #aaaaaa;
-    color: darkmagenta;
-    font-size: 130%;
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-p {
-    background-color: #cccccc;
-    line-height: 150%;
-}
-address {
-    background-color: white;
-    font-size: normal;
-    text-align: right;
+.logo {
+    width: 120px;
+    height: auto;
 }
 
-em {
-    color: blue;
-    font-style: normal;
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+.menu li img {
+    width: 150px; /* Ajustar tamaño a 150px */
+    height: auto; /* Mantener proporción */
+    border: 3px solid orange; /* Borde naranja */
+    border-radius: 10px; /* Esquinas redondeadas (opcional) */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+main {
+    padding: 10px;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #004aad;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+.imagenes img {
+    width: 500px;
+    height: auto;
+    border: 5px solid #333; 
+    border-radius: 10px; 
+    display: block;
+    margin: 10px auto; 
+    }
+
+
+
+.ubicacion {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    border: 3px solid #333;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    transition: transform 0.3s;
+}
+
+.ubicacion:hover {
+    transform: scale(1.05);
+}
+
+
+.formulario {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formulario h2 {
+    margin-bottom: 15px;
+    color: #004aad;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
     font-weight: bold;
-    text-decoration: underline;
+    text-align: left;
 }
 
-strong {
-    color: green;
-    font-style: normal;
-    font-weight: normal;
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
-.cuadros{
-    width:240px;
-    border:1px lightgray solid;
-    border-radius:3px;
-    background-color:white;
-    text-align:center;
-    padding:5px 5px 22px 5px;
- }
- 
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #62e974;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #43c4eb;
+    transform: scale(1.05);
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 50px;
+    height: auto;
+    border: 2px solid #e99d2b;
+    border-radius: 50%;
+    background-color: #fff;
+    
+}
+
+.social-icons img:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ================== RESPONSIVO ================== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+}
